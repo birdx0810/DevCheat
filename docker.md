@@ -38,6 +38,7 @@ docker push `username`/`image`  # Push docker image to docker hub
 ## Docker Containers
 ```bash
 docker ps                       # List running containers (add `-a` for all)
+docker attach `container_id`                  # Attach to running docker
 docker stop `container_id`      # Stop one or more container(s)
 docker stop $(docker ps -a -q)  # Stop all containers
 docker rm `container_id`        # Remove one or more container(s)
@@ -51,8 +52,12 @@ docker run [options] `username`/`image`[:tag] [command]
 
 - options
     - `-d` - Detached mode (default: false)
+    - `-it` - Attach to container stdin and tty 
     - `--name` - Define a name for container identification (default: random str)
+    - `--user` - Set user for running docker container process (default: root)
 
 - `:TAG` - Specifies a particular version of the image
+
+<!-- $(id -u):$(id -g)-->
 
 ## TODO: Dockerfile
