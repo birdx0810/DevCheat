@@ -1,8 +1,8 @@
 # Docker CheatSheet
 
 ## Concepts
-- Docker is not a virtual machine/sandbox environment.
-- Docker is run above operating system, VMs are run above hypervisor.
+- **Docker is not a virtual machine/sandbox environment**.
+- Docker is run above operating system (docker daemon runs and communicates with the os using commands via docker.sock); whereas VMs are run above hypervisor.
 ![](https://i.imgur.com/PxdN0Wo.png)
 
 - Relatively similar concepts
@@ -37,6 +37,22 @@ docker push `username`/`image`  # Push docker image to docker hub
 
 ## Docker Containers
 ```bash
-docker ps               # List containers
-docker rm `image_id`    # Remove one or more containers
+docker ps                       # List running containers (add `-a` for all)
+docker stop `container_id`      # Stop one or more container(s)
+docker stop $(docker ps -a -q)  # Stop all containers
+docker rm `container_id`        # Remove one or more container(s)
+docker rm $(docker ps -a -f status=exited -q) # Remove all exited containers
 ```
+
+## Docker Run
+```bash
+docker run [options] `username`/`image`[:tag] [command]
+```
+
+- options
+    - `-d` - Detached mode (default: false)
+    - `--name` - Define a name for container identification (default: random str)
+
+- `:TAG` - Specifies a particular version of the image
+
+## TODO: Dockerfile
