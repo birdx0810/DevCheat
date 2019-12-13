@@ -43,6 +43,8 @@ docker stop `container_id`      # Stop one or more container(s)
 docker stop $(docker ps -a -q)  # Stop all containers
 docker rm `container_id`        # Remove one or more container(s)
 docker rm $(docker ps -a -f status=exited -q) # Remove all exited containers
+docker start  `docker ps -q -l` # restart container in background
+docker attach `docker ps -q -l` # reattach to the terminal & stdin of running container
 ```
 
 ## Docker Run
