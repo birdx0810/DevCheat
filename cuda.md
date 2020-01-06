@@ -33,6 +33,18 @@ sudo apt-get install -y --no-install-recommends libnvinfer5=5.1.5-1+cuda10.0 \
 
 ```
 
+## Uninstall 
+```
+apt-get --purge remove "*cublas*" "cuda*"
+rm /usr/local/cuda
+sudo apt-get remove nvidia-cuda-toolkit
+sudo apt-get remove --auto-remove nvidia-cuda-toolkit
+sudo apt-get purge --auto-remove nvidia-cuda-toolkit
+
+nvidia-installer --uninstall
+sudo apt remove nvidia-*
+
+```
 
 <!--
 ## Install NVIDIA Graphics Drivers
