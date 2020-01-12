@@ -1,4 +1,4 @@
-# Guidelines for installing CUDA and cuDNN for Ubuntu 18.04 x TensorFlow 2.0
+# CUDA and cuDNN Installation CheatSheet
 Reference: [Link](https://www.tensorflow.org/install/gpu)
 
 ## Add NVIDIA package repositories
