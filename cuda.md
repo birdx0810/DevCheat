@@ -1,6 +1,11 @@
 # CUDA and cuDNN Installation CheatSheet
 Reference: [Link](https://www.tensorflow.org/install/gpu)
 
+## Remove NVIDIA
+```
+sudo apt clean; sudo apt update; sudo apt purge cuda; sudo apt purge nvidia-*
+```
+
 ## Add NVIDIA package repositories
 ```
 wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/cuda-repo-ubuntu1804_10.0.130-1_amd64.deb
@@ -43,7 +48,7 @@ sudo apt-get purge --auto-remove nvidia-cuda-toolkit
 
 nvidia-installer --uninstall
 sudo apt remove nvidia-*
-
+sudo apt-get -y install cuda cuda-10-1 cuda-toolkit-10-1
 ```
 
 <!--
