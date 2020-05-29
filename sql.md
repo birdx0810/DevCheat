@@ -32,6 +32,7 @@ FLUSH PRIVILEGES;
 #### List schemas/tables
 ```
 LIST DATABASES;
+SHOW DATABASES;
 USE database;
 LIST TABLES;
 ```
@@ -49,6 +50,11 @@ COLLATE utf8_BIN
 ;
 ```
 
+#### Delete schema
+```
+DROP DATABASE IF EXISTS db_name;
+```
+
 # Create table
 ```
 CREATE TABLE `database`.`table` (
@@ -59,4 +65,36 @@ CREATE TABLE `database`.`table` (
     REFERENCES tasks (task_id) 
     ON UPDATE RESTRICT 
     ON DELETE CASCADE
+)
+```
+
+# Alter table
+```
+ALTER TABLE tablename MODIFY columnname VARCHAR(20);
+```
+
+# Insert
+```
+INSERT INTO table (name, age) VALUES ('A', '10'), ('B', '9');
+```
+
+# Select
+```
+SELECT col 
+FROM table 
+WHERE condition 
+GROUP BY col
+HAVING condition
+ORDER BY col 
+LIMIT n;
+```
+
+# Update
+```
+UPDATE table SET col_1 = var_1 WHERE col_2 = var_2;
+```
+
+# Delete
+```
+DELETE FROM table WHERE col = var;
 ```
