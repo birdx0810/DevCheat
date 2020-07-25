@@ -98,3 +98,6 @@ UPDATE table SET col_1 = var_1 WHERE col_2 = var_2;
 ```
 DELETE FROM table WHERE col = var;
 ```
+
+# Join
+Inner Join ($A cap B$)
