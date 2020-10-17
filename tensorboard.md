@@ -43,8 +43,6 @@ for epoch in range(EPOCHS):
   with train_summary_writer.as_default():
     tf.summary.scalar('loss', train_loss.result(), step=epoch)
     tf.summary.scalar('accuracy', train_accuracy.result(), step=epoch)
-
-
 ```
 
 ### PyTorch

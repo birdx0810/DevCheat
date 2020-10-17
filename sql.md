@@ -60,9 +60,9 @@ DROP DATABASE IF EXISTS db_name;
 CREATE TABLE `database`.`table` (
   `user_id` VARCHAR(20) NOT NULL,
   `user_name` VARCHAR(4) CHARACTER SET 'utf8' NOT NULL,
-  PRIMARY KEY (`line_id`),
-  FOREIGN KEY (task_id), 
-    REFERENCES tasks (task_id) 
+  PRIMARY KEY (`user_id`),
+  FOREIGN KEY (`dept_id`), 
+    REFERENCES department (`dept_id`) 
     ON UPDATE RESTRICT 
     ON DELETE CASCADE
 )
