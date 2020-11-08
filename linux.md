@@ -42,3 +42,12 @@ fish_config
 git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
 sh ~/.vim_runtime/install_awesome_vimrc.sh
 ```
+
+### steam
+```bash
+sudo dpkg --add-architecture i386
+sudo apt-get update
+sudo apt-get install libgl1-mesa-glx:i386 -y
+sudo apt-get install ./steam_latest.deb 
+```
+
