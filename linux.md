@@ -8,6 +8,9 @@ sudo apt-get python3-dev python3-pip python3-venv
 
 ### language
 ```bash
+# fcitx Input Method
+sudo apt-get install fcitx fcitx-pinyin
+# IBus Input Method (unstable)
 sudo apt-get install ibus ibus-pinyin ibus-chewing ibus-mozc
 ```
 

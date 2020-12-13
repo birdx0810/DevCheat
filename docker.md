@@ -31,6 +31,7 @@ docker login -u `username`
 ```bash
 docker images   # List images
 docker rmi      # Remove one or more images
+docker rmi $(docker images -q)  # Remove all images
 docker pull `username`/`image`  # Pull docker image from docker hub
 docker push `username`/`image`  # Push docker image to docker hub
 ```
