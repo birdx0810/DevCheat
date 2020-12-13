@@ -1,11 +1,18 @@
 # Python Cheat Sheet
 
+## pipx
+> Virtual environment for frequently used Python modules
+```bash
+python -m pip install --user pipx
+python -m pipx ensurepath
+```
+
 ## pipenv
+> Integration of `pip` package installer and `venv` virtual environment
 ### Getting Started
 ```bash
 # Install
-pip install --user pipx
-pip install --user pipenv
+python -m pip install --user pipenv
 # Upgrade
 pip install --user -U pipenv
 ```
